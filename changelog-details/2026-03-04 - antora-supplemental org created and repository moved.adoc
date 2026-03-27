@@ -1,0 +1,11 @@
+= 2026-03-04 — antora-supplemental org created and repository moved
+
+This repository was moved from the prior **dev-centr** / **the-dev-center** GitHub context into https://github.com/antora-supplemental[antora-supplemental] **on the same day** the organization was created.
+
+The GitHub API reports `GET /orgs/antora-supplemental` → `created_at`: *2026-03-04T10:55:15Z*. Treat **that calendar day** as the migration event, sitting **after** link:2026-01-29%20-%200.1.0%20initial%20release.adoc[0.1.0 (2026-01-29)] and **before** link:2026-03-26%20-%200.1.5%20VCS%20repo%20logo%20and%20npm%20metadata.adoc[0.1.5 (2026-03-26)] in this changelog’s timeline.
+
+After the move, URL and metadata clean-up (npm, playbooks, docs) continued; the **0.1.5** detailed entry on 2026-03-26 bundles a later slice of that work.
+
+== Filesystem dates
+
+OS `LastWriteTime` / `CreationTime` on a clone are not used as the source of truth for when the move happened—use this dated filename, link:../CHANGELOG.adoc[CHANGELOG.adoc] order, and GitHub’s org `created_at` above.
