@@ -8,6 +8,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 Entries below are in **chronological order** by date: prior release, then the **2026-03-04** org creation and repository move, then the next release.
 
+== Unreleased
+
+* Restore default Antora UI spacing between navbar dropdown labels and the caret: removed the `navbar-link` `padding-right` override so the bundled UI rule (`2.5em`) applies unchanged.
+* link:changelog-details/2026-04-12%20-%20navbar-link%20default%20padding.adoc[Detailed note — 2026-04-12]
+
 == [0.1.0] - 2026-01-29
 
 First public release: dark mode toggle and supplemental styling for the Antora default UI, FOUC prevention, system preference and `localStorage`, example playbooks, and documentation.

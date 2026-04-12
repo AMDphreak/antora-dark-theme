@@ -47,11 +47,6 @@ html.dark-theme .navbar .navbar-dropdown .navbar-item:hover {
   background-color: #1f2125;
 }
 
-/* Bring dropdown carets closer to the label text (enough gap so caret doesn’t overlap) */
-.navbar .navbar-link {
-  padding-right: 2.25rem;
-}
-
 html.dark-theme .navbar .button,
 html.dark-theme .navbar .button.is-primary {
   background-color: #2c2e33;
