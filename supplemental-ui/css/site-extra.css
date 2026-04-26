@@ -738,3 +738,21 @@ html.dark-theme [role="blue"] {
 html.dark-theme .videoblock {
   background-color: transparent;
 }
+
+/* Nav tree: one label column for every row (aligns multi-line and leaf vs. folder;
+   same idea as default UI nav.css; keeps older core bundles useful until upgraded). */
+.nav .nav-item {
+  position: relative;
+}
+
+.nav .nav-item > .nav-link,
+.nav .nav-item > .nav-text {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  text-indent: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-left: calc(var(--nav-line-height) * 1em + 0.15em);
+}
