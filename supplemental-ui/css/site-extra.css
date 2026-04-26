@@ -794,3 +794,94 @@ html.dark-theme .videoblock {
 .nav-panel-explore .components {
   overflow-y: auto !important;
 }
+
+/* Doc home: .openblock.cards + .exampleblock.tile
+   Lives in supplemental (site-extra.css) so release ui-bundle.zip + FoodTruckNerdz/docs prebuild see it. */
+:root {
+  --doc-tile-radius: 0.5rem;
+  --doc-tile-border-color: var(--panel-border-color);
+  --doc-tile-background: var(--color-white);
+  --doc-tile-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.08);
+  --doc-tile-shadow-hover: 0 4px 8px -2px rgba(0, 0, 0, 0.1), 0 12px 24px -4px rgba(0, 0, 0, 0.12);
+  --doc-tile-transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+
+.doc .openblock.cards {
+  margin: 1.5rem 0 0;
+}
+
+.doc .openblock.cards > .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.doc .openblock.cards .exampleblock.tile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.doc .openblock.cards .exampleblock.tile > .content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 7.5rem;
+  margin: 0;
+  background: var(--doc-tile-background);
+  border: 1px solid var(--doc-tile-border-color);
+  border-radius: var(--doc-tile-radius);
+  box-shadow: var(--doc-tile-shadow);
+  padding: 1.25rem 1.25rem 1rem;
+  transition: var(--doc-tile-transition);
+}
+
+.doc .openblock.cards .exampleblock.tile > .content > :last-child:not(:only-child) {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .doc .openblock.cards .exampleblock.tile > .content:hover {
+    box-shadow: var(--doc-tile-shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doc .openblock.cards .exampleblock.tile > .content {
+    transition: none;
+  }
+
+  .doc .openblock.cards .exampleblock.tile > .content:hover {
+    box-shadow: var(--doc-tile-shadow);
+    transform: none;
+  }
+}
+
+html.dark-theme {
+  --doc-tile-border-color: #3d4048;
+  --doc-tile-background: #1f2125;
+  --doc-tile-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.45);
+  --doc-tile-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.4), 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Beat generic `html.dark-theme .doc .exampleblock > .content` !important for project tiles */
+html.dark-theme .doc .openblock.cards .exampleblock.tile > .content {
+  background: var(--doc-tile-background) !important;
+  background-color: var(--doc-tile-background) !important;
+  border-color: var(--doc-tile-border-color) !important;
+}
+
+@media print {
+  .doc .openblock.cards .exampleblock.tile > .content {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
