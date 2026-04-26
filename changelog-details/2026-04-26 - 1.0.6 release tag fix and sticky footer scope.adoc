@@ -1,0 +1,13 @@
+= 1.0.6 — release tag correction and sticky footer scope
+:description: Changelog detail for antora-dark-theme 1.0.6
+:navtitle: 1.0.6 tag fix
+
+== Tag `v1.0.5` vs `package.json`
+
+The commit titled “Release v1.0.5” on `main` was not the commit that the annotated tag `v1.0.5` peeled to; the tag was corrected by shipping **1.0.6** with a new tag aligned to `package.json` and the release workflow.
+
+== Sticky footer
+
+Viewport-level “footer at bottom when content is short” layout is implemented in **antora-ui-default** (`body` / `div.body` / `footer` flex column), not in this dark supplemental package.
+
+Downstream sites can keep the same rules in their own supplemental stylesheet (e.g. Food Truck Nerdz `site-doc-layout.css`) until they consume a UI bundle built from a default UI release that includes that change.
