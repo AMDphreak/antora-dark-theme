@@ -756,3 +756,41 @@ html.dark-theme .videoblock {
   overflow-wrap: break-word;
   padding-left: calc(var(--nav-line-height) * 1em + 0.15em);
 }
+
+/* In-flow left nav: fill the column next to main, tree scrolls only when content overflows. */
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: stretch !important;
+    min-height: 0 !important;
+  }
+
+  .nav {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .nav .panels {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .nav-panel-menu {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* Bundle default uses overflow-y: scroll on nav panels; prefer scrollbar only when needed. */
+.nav-panel-menu,
+.nav-panel-explore .components {
+  overflow-y: auto !important;
+}

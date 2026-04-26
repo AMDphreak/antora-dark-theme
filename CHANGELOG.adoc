@@ -8,6 +8,10 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 Entries below are in **chronological order** by date: prior release, then the **2026-03-04** org creation and repository move, then the next release.
 
+== [1.0.1] - 2026-04-26
+
+* `site-extra.css` (supplemental): on wide viewports, the left column uses a flex column layout so the nav area fills the height beside `main` while remaining in document flow. `.nav-panel-menu` and `.nav-panel-explore .components` use `overflow-y: auto` so a scrollbar appears only when content exceeds the available space.
+
 == Unreleased
 
 * Documentation: replace the invalid “stacked directories” `supplemental_files` example with Antora-correct options (single merged directory, pre-built bundle + virtual files, or virtual partial overrides). See https://docs.antora.org/antora/latest/playbook/ui-supplemental-files[Antora supplemental UI].
